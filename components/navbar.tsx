@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Languages } from "lucide-react"
+import { Languages, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/hooks/use-language"
 import { content } from "@/lib/content"
@@ -13,6 +13,7 @@ export function Navbar() {
   const { language, toggleLanguage } = useLanguage()
   const [activeSection, setActiveSection] = useState("home")
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const navItems = content.nav[language]
 
@@ -42,58 +43,116 @@ export function Navbar() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }
+    setIsMobileMenuOpen(false)
   }
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass backdrop-blur-xl" : "bg-transparent"
-      }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="w-1/4 text-xl font-bold bg-gradient-to-r from-[#55E6FF] to-[#A78BFA] bg-clip-text text-transparent">
-            <TypeAnimation
-              sequence={[
-                "Thiago Vasconcelos", 
-                2000,
-                "Engenheiro de Software", 
-                2000,
-                "Web/Mobile", 
-                2000,
-              ]}
-              wrapper="span"
-              cursor={true}
-              repeat={Infinity}
-            />
-          </motion.div>
+    <>
+      <motion.nav
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled ? "glass backdrop-blur-xl" : "bg-transparent"
+        }`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="hidden md:block w-1/4 text-xl font-bold bg-gradient-to-r from-[#55E6FF] to-[#A78BFA] bg-clip-text text-transparent">
+              <TypeAnimation
+                sequence={[
+                  "Thiago Vasconcelos", 
+                  2000,
+                  "Engenheiro de Software", 
+                  2000,
+                  "Web/Mobile", 
+                  2000,
+                ]}
+                wrapper="span"
+                cursor={true}
+                repeat={Infinity}
+              />
+            </motion.div>
 
-          <div className="hidden md:flex items-center space-x-8">
-            {Object.entries(navItems).map(([key, label]) => (
-              <button
-                key={key}
-                onClick={() => scrollToSection(key)}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-[#55E6FF] ${
-                  activeSection === key ? "text-[#55E6FF]" : "text-muted-foreground"
-                }`}>
-                {label}
-              </button>
-            ))}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="md:hidden flex-1 flex justify-center text-lg font-bold bg-gradient-to-r from-[#55E6FF] to-[#A78BFA] bg-clip-text text-transparent">
+              <TypeAnimation
+                sequence={[
+                  "Thiago Vasconcelos", 
+                  2000,
+                  "Engenheiro de Software", 
+                  2000,
+                  "Web/Mobile", 
+                  2000,
+                ]}
+                wrapper="span"
+                cursor={true}
+                repeat={Infinity}
+              />
+            </motion.div>
+
+            <div className="hidden md:flex items-center space-x-8">
+              {Object.entries(navItems).map(([key, label]) => (
+                <button
+                  key={key}
+                  onClick={() => scrollToSection(key)}
+                  className={`text-sm font-medium transition-colors duration-200 hover:text-[#55E6FF] ${
+                    activeSection === key ? "text-[#55E6FF]" : "text-muted-foreground"
+                  }`}>
+                  {label}
+                </button>
+              ))}
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleLanguage}
+                className="glass-hover border border-white/10">
+                <Languages className="h-4 w-4 mr-2" />
+                {language.toUpperCase()}
+              </Button>
+
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="md:hidden glass-hover border border-white/10">
+                {isMobileMenuOpen ? (
+                  <X className="h-4 w-4" />
+                ) : (
+                  <Menu className="h-4 w-4" />
+                )}
+              </Button>
+            </div>
           </div>
-
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={toggleLanguage}
-            className="glass-hover border border-white/10">
-            <Languages className="h-4 w-4 mr-2" />
-            {language.toUpperCase()}
-          </Button>
         </div>
-      </div>
-    </motion.nav>
+      </motion.nav>
+
+      {isMobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          className="fixed top-16 left-0 right-0 z-40 glass backdrop-blur-xl border-b border-white/10 md:hidden">
+          <div className="px-4 py-6">
+            <div className="flex flex-col space-y-4">
+              {Object.entries(navItems).map(([key, label]) => (
+                <button
+                  key={key}
+                  onClick={() => scrollToSection(key)}
+                  className={`text-left text-lg font-medium transition-colors duration-200 hover:text-[#55E6FF] py-2 ${
+                    activeSection === key ? "text-[#55E6FF]" : "text-muted-foreground"
+                  }`}>
+                  {label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </>
   );
 }
