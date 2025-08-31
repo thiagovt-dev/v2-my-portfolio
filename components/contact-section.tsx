@@ -59,11 +59,10 @@ export function ContactSection() {
       }
 
       setIsSubmitted(true)
-      setFormData({ name: "", email: "", subject: "", message: "" })
+      setFormData({ name: "", email: "", subject: "", message: "", company: "" })
 
       // Oculta o sucesso depois de alguns segundos
       setTimeout(() => setIsSubmitted(false), 3000)
-    } catch (err: any) {
       setError(
         language === "en"
           ? "Unable to send your message. Please try again later."
@@ -137,8 +136,8 @@ export function ContactSection() {
             <div className="pt-6">
               <p className="text-sm text-muted-foreground mb-4">
                 {language === "en"
-                  ? "Response time: Usually within 24 hours"
-                  : "Tempo de resposta: Geralmente em 24 horas"}
+                  ? "Response time: Usually within 1 hour"
+                  : "Tempo de resposta: Geralmente em 1 hora"}
               </p>
               <div className="flex items-center gap-2 text-sm text-[#55E6FF]">
                 <CheckCircle className="h-4 w-4" />
