@@ -36,7 +36,7 @@ export const content = {
     en: {
       title: " Full-Stack Software Engineer",
       subtitle:
-        "I build robust web platforms with Next.js, high-performance APIs (Node/TS, Laravel, NestJS), solid SQL data models, intelligent LLM chatbots with N8N, and production-ready Flutter apps.",
+        "I build robust web platforms with Next.js, high-performance APIs (Node/TS, Laravel, NestJS), solid SQL data models, intelligent LLM chatbots with N8N, and production-ready Flutter apps for Android/iOS.",
       ctaPrimary: "View Projects",
       ctaSecondary: "Get in Touch",
       badges: ["Next.js", "Node/TS", "Laravel/NestJS", "SQL", "LLMs & N8N", "Flutter"],
@@ -44,7 +44,7 @@ export const content = {
     pt: {
       title: "Engenheiro de Software Full-Stack",
       subtitle:
-        "Construo plataformas web com Next.js, APIs de alta performance (Node/TS, Laravel, NestJS), modelos de dados SQL, chatbots inteligentes com LLMs e N8N, e apps Flutter prontos para produção.",
+        "Construo plataformas web com Next.js, APIs de alta performance (Node/TS, Laravel, NestJS), modelos de dados SQL, chatbots inteligentes com LLMs e N8N, e apps mobiles Android/iOS com Flutter prontos para produção.",
       ctaPrimary: "Ver Projetos",
       ctaSecondary: "Fale Comigo",
       badges: ["Next.js", "Node/TS", "Laravel/NestJS", "SQL", "LLMs & N8N", "Flutter"],
