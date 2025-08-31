@@ -10,13 +10,13 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Thiago - Full-Stack Software Engineer | Next.js, Node.js, Flutter",
   description:
-    "Full-Stack Software Engineer specialized in Next.js, Node.js/TypeScript, PHP (Laravel), NestJS, SQL databases, LLM models, N8N chatbots/automations, and Flutter development.",
+    "Full-Stack Software Engineer specialized in Next.js, Node.js/TypeScript, PHP (PHP/Laravel), NestJS, SQL databases, LLM models, N8N chatbots/automations, and Flutter development.",
   keywords: [
     "Full-Stack Software Engineer",
     "Next.js",
     "Node.js",
     "TypeScript",
-    "Laravel",
+    "PHP/Laravel",
     "NestJS",
     "Flutter",
     "LLM",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     alternateLocale: ["en_US"],
     title: "Thiago - Full-Stack Software Engineer",
     description:
-      "Full-Stack Software Engineer specialized in Next.js, Node.js/TypeScript, PHP (Laravel), NestJS, SQL databases, LLM models, N8N chatbots/automations, and Flutter development.",
+      "Full-Stack Software Engineer specialized in Next.js, Node.js/TypeScript, PHP (PHP/Laravel), NestJS, SQL databases, LLM models, N8N chatbots/automations, and Flutter development.",
     siteName: "Thiago Portfolio",
   },
   alternates: {
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Thiago - Full-Stack Software Engineer",
     description:
-      "Full-Stack Software Engineer specialized in Next.js, Node.js/TypeScript, PHP (Laravel), NestJS, SQL databases, LLM models, N8N chatbots/automations, and Flutter development.",
+      "Full-Stack Software Engineer specialized in Next.js, Node.js/TypeScript, PHP (PHP/Laravel), NestJS, SQL databases, LLM models, N8N chatbots/automations, and Flutter development.",
   },
   robots: {
     index: true,

@@ -36,18 +36,18 @@ export const content = {
     en: {
       title: " Full-Stack Software Engineer",
       subtitle:
-        "I build robust web platforms with Next.js, high-performance APIs (Node/TS, Laravel, NestJS), solid SQL data models, intelligent LLM chatbots with N8N, and production-ready Flutter apps for Android/iOS.",
+        "I build robust web platforms with Next.js, high-performance APIs (Node/NestJS, PHP/Laravel, NestJS), solid SQL data models, intelligent LLM chatbots with N8N, and production-ready Flutter apps for Android/iOS.",
       ctaPrimary: "View Projects",
       ctaSecondary: "Get in Touch",
-      badges: ["Next.js", "Node/TS", "Laravel/NestJS", "SQL", "LLMs & N8N", "Flutter"],
+      badges: ["Next.js", "Node/NestJS", "PHP/Laravel/NestJS", "SQL", "LLMs & N8N", "Flutter"],
     },
     pt: {
       title: "Engenheiro de Software Full-Stack",
       subtitle:
-        "Construo plataformas web com Next.js, APIs de alta performance (Node/TS, Laravel, NestJS), modelos de dados SQL, chatbots inteligentes com LLMs e N8N, e apps mobiles Android/iOS com Flutter prontos para produção.",
+        "Construo plataformas web com Next.js, APIs de alta performance (Node/NestJS, PHP/Laravel, NestJS), modelos de dados SQL, chatbots inteligentes com LLMs e N8N, e apps mobiles Android/iOS com Flutter prontos para produção.",
       ctaPrimary: "Ver Projetos",
       ctaSecondary: "Fale Comigo",
-      badges: ["Next.js", "Node/TS", "Laravel/NestJS", "SQL", "LLMs & N8N", "Flutter"],
+      badges: ["Next.js", "Node/NestJS", "PHP/Laravel/NestJS", "SQL", "LLMs & N8N", "Flutter"],
     },
   },
 
@@ -63,7 +63,7 @@ export const content = {
         },
         {
           title: "APIs & Backends",
-          desc: "Node/TypeScript, NestJS or Laravel; JWT/OAuth, RBAC, queues, websockets, caching, and test coverage.",
+          desc: "Node/TypeScript, NestJS or PHP/Laravel; JWT/OAuth, RBAC, queues, websockets, caching, and test coverage.",
         },
         {
           title: "SQL Data Modeling",
@@ -94,7 +94,7 @@ export const content = {
         },
         {
           title: "APIs & Backends",
-          desc: "Node/TypeScript, NestJS ou Laravel; JWT/OAuth, RBAC, filas, websockets, cache e testes.",
+          desc: "Node/TypeScript, NestJS ou PHP/Laravel; JWT/OAuth, RBAC, filas, websockets, cache e testes.",
         },
         {
           title: "Modelagem SQL",
@@ -143,7 +143,7 @@ export const content = {
             "Transparent auditability and role-based approvals",
             "Reduced procurement cycle time by ~25%",
           ],
-          stack: ["Next.js", "Laravel", "MySQL", "Redis", "Queues"],
+          stack: ["Next.js", "PHP/Laravel", "MySQL", "Redis", "Queues"],
           links: { demo: "#", repo: "#" },
         },
         {
@@ -200,7 +200,7 @@ export const content = {
             "Auditabilidade transparente e aprovações por papéis",
             "Redução de ~25% no ciclo de compras",
           ],
-          stack: ["Next.js", "Laravel", "MySQL", "Redis", "Filas"],
+          stack: ["Next.js", "Supabase", "PostgreSQL"],
           links: { demo: "#", repo: "#" },
         },
         {
@@ -290,7 +290,7 @@ export const content = {
       title: "Tech I Use",
       groups: [
         { name: "Frontend", items: ["Next.js", "React", "Tailwind", "shadcn/ui"] },
-        { name: "Backend", items: ["Node.js", "TypeScript", "NestJS", "Laravel", "PHP"] },
+        { name: "Backend", items: ["Node.js", "TypeScript", "NestJS", "PHP/Laravel", "PHP"] },
         { name: "Data", items: ["PostgreSQL", "MySQL", "Redis"] },
         { name: "AI/Automation", items: ["LLMs", "N8N", "RAG", "Embeddings"] },
         { name: "Mobile", items: ["Flutter", "Dart"] },
@@ -301,7 +301,7 @@ export const content = {
       title: "Tecnologias",
       groups: [
         { name: "Frontend", items: ["Next.js", "React", "Tailwind", "shadcn/ui"] },
-        { name: "Backend", items: ["Node.js", "TypeScript", "NestJS", "Laravel", "PHP"] },
+        { name: "Backend", items: ["Node.js", "TypeScript", "NestJS", "PHP/Laravel", "PHP"] },
         { name: "Dados", items: ["PostgreSQL", "MySQL", "Redis"] },
         { name: "IA/Automação", items: ["LLMs", "N8N", "RAG", "Embeddings"] },
         { name: "Mobile", items: ["Flutter", "Dart"] },
