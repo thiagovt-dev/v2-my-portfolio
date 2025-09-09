@@ -1,11 +1,12 @@
 "use client"
 
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Github, Images } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { SectionHeader } from "@/components/section-header"
+import { ProjectGallery } from "@/components/project-gallery"
 import { useLanguage } from "@/hooks/use-language"
 import { content } from "@/lib/content"
 
@@ -104,31 +105,55 @@ export function ProjectsSection() {
                       {project.title}
                     </CardTitle>
                     <div className="flex gap-2 flex-shrink-0">
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="p-2 h-auto glass-hover border border-white/10 hover:border-[#55E6FF]/50"
-                        asChild
-                      >
-                        <a href={project.links.demo} target="_blank" rel="noopener noreferrer" aria-label="View demo">
-                          <ExternalLink className="h-4 w-4" />
-                        </a>
-                      </Button>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="p-2 h-auto glass-hover border border-white/10 hover:border-[#55E6FF]/50"
-                        asChild
-                      >
-                        <a
-                          href={project.links.repo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label="View repository"
+                      {/* Gallery Button */}
+                      {project.links.gallery && project.gallery ? (
+                        <ProjectGallery
+                          images={project.gallery.images}
+                          projectTitle={project.title}
                         >
-                          <Github className="h-4 w-4" />
-                        </a>
-                      </Button>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="p-2 h-auto glass-hover border border-white/10 hover:border-[#55E6FF]/50"
+                            aria-label="View gallery"
+                          >
+                            <Images className="h-4 w-4" />
+                          </Button>
+                        </ProjectGallery>
+                      ) : (
+                        /* Demo Button */
+                        project.links.demo && (
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="p-2 h-auto glass-hover border border-white/10 hover:border-[#55E6FF]/50"
+                            asChild
+                          >
+                            <a href={project.links.demo} target="_blank" rel="noopener noreferrer" aria-label="View demo">
+                              <ExternalLink className="h-4 w-4" />
+                            </a>
+                          </Button>
+                        )
+                      )}
+                      
+                      {/* Repository Button */}
+                      {project.links.repo && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="p-2 h-auto glass-hover border border-white/10 hover:border-[#55E6FF]/50"
+                          asChild
+                        >
+                          <a
+                            href={project.links.repo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="View repository"
+                          >
+                            <Github className="h-4 w-4" />
+                          </a>
+                        </Button>
+                      )}
                     </div>
                   </div>
                   <CardDescription className="text-muted-foreground leading-relaxed text-pretty">

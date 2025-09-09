@@ -118,116 +118,204 @@ export const content = {
 
   projects: {
     en: {
-      title: "Featured Case Studies",
+      title: "Featured Projects",
       cards: [
         {
           slug: "safety-platform",
           title: "SOS Mulher Segura — Public Safety Platform",
           summary:
-            "Command center and citizen apps enabling real-time incident reporting, secure voice rooms, and live dispatch.",
+            "Women's safety app used by municipalities as a protection measure. Features panic button for direct emergency calls to nearest patrol and central dispatch, integrated voice rooms, and real-time location sharing.",
           highlights: [
-            "Sub-200ms websocket updates for 1k+ concurrent users",
-            "JWT auth, RBAC, Clean Architecture, automated tests",
-            "Voice rooms (WebRTC) with recording & audit trails",
+            "Panic button with direct dispatch to nearest patrol and central",
+            "Integrated voice rooms for continuous contact with patrol units",
+            "Real-time location sharing and tracking capabilities",
+            "Municipal-level deployment for public safety initiatives",
           ],
-          stack: ["Next.js", "NestJS", "PostgreSQL", "Redis", "WebSockets", "WebRTC"],
-          links: { demo: "#", repo: "#" },
+          stack: ["Flutter", "Next.js", "NestJS + Fastify", "Prisma", "PostgreSQL + PostGIS", "BullMQ", "Redis", "WebSockets", "Push Notifications"],
+          links: { demo: null, repo: null, gallery: true },
+          gallery: {
+            images: [
+              "/projects/sos-mulher/sos-mob-1.jpeg",
+              "/projects/sos-mulher/sos-mob-2.jpeg", 
+              "/projects/sos-mulher/sos-mob-3.jpeg",
+              "/projects/sos-mulher/sos-mob-4.jpeg",
+              "/projects/sos-mulher/sos-mob-5.jpeg",
+              "/projects/sos-mulher/sos-web-1.jpeg",
+              "/projects/sos-mulher/sos-web-2.jpeg"
+            ]
+          }
         },
         {
           slug: "procurement-suite",
-          title: "Central de Compras Brasil — E-Procurement Suite",
+          title: "Licita Aí — Public Bidding Panel",
           summary:
-            "Auctions with dispute rooms, proposals, quotes, compliance flows, and audit logs.",
+            "Web platform that facilitates the management of public bidding processes, connecting suppliers and public agencies through a modern and intuitive interface.",
           highlights: [
-            "Dispute & negotiation workflows with deadlines and counter-offers",
-            "Transparent auditability and role-based approvals",
-            "Reduced procurement cycle time by ~25%",
+            "Supplier registration and product/service management",
+            "Real-time bidding process tracking and monitoring",
+            "Auction dispute room with live negotiations",
+            "AI virtual assistant for process guidance",
           ],
-          stack: ["Next.js", "PHP/Laravel", "MySQL", "Redis", "Queues"],
-          links: { demo: "#", repo: "#" },
+          stack: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Webhooks", "Supabase Realtime", "Tailwind CSS", "shadcn/ui"],
+          links: { demo: "", repo: "", gallery: true },
+          gallery: {
+            images: [
+              "/projects/licita-ai/licita-ai-1.png",
+              "/projects/licita-ai/licita-ai-2.jpeg",
+              "/projects/licita-ai/licita-ai-3.jpeg",
+              "/projects/licita-ai/licita-ai-4.jpeg",
+              "/projects/licita-ai/licita-ai-5.jpeg",
+              "/projects/licita-ai/licita-ai-6.jpeg",
+              "/projects/licita-ai/licita-ai-7.png",
+            ]
+          }
         },
         {
           slug: "fleet-management",
-          title: "Carletto Frotas — Fleet Management",
+          title: "Feira Agro — From Farm to Table",
           summary:
-            "Vehicle/driver control, maintenance scheduling, fuel & cost tracking, and real-time alerts.",
+            "Mobile app developed for the Agronomy Department of Rio Branco do Sul - PR City Hall to connect local rural producers with the general population through an online marketplace.",
           highlights: [
-            "Preventive maintenance rules and parts catalog",
-            "Dashboards with actionable KPIs",
-            "99.95% uptime under peak usage",
+            "Online marketplace connecting consumers directly with local producers",
+            "Municipal pickup point for order collection",
+            "Web panel for city hall management and oversight",
+            "Support for local agriculture and community development",
           ],
-          stack: ["Next.js", "NestJS", "PostgreSQL", "Redis"],
-          links: { demo: "#", repo: "#" },
+          stack: ["Flutter", "Firebase", "PostgreSQL", "Next.js"],
+          links: { demo: "", repo: "", gallery: true },
+          gallery: {
+            images: [
+              "/projects/feira-agro/Screenshot_1757438092.png",
+              "/projects/feira-agro/Screenshot_1757438326.png",
+              "/projects/feira-agro/Screenshot_1757438556.png",
+              "/projects/feira-agro/Screenshot_1757438711.png",
+              "/projects/feira-agro/Screenshot_1757438835.png",
+              "/projects/feira-agro/Screenshot_1757438977.png",
+              "/projects/feira-agro/Screenshot_1757441182.png"
+            ]
+          }
         },
         {
           slug: "fitness-app",
-          title: "Gym-Junkies — Health & Fitness",
+          title: "Gestor de Obras — Public Works Management",
           summary:
-            "Hybrid app with training plans, body-fat/TDEE calculators, and premium AI nutrition coaching.",
+            "Comprehensive web application for managing public works projects for government agencies such as city halls and departments. A robust and complete SaaS solution.",
           highlights: [
-            "Offline-ready routines and progress tracking",
-            "LLM-powered meal suggestions via N8N flows",
-            "A/B-tested onboarding raised activation",
+            "Complete project lifecycle management from service orders to completion",
+            "Budget planning, inventory control, and financial management",
+            "Invoice management and document control system",
+            "Real-time monitoring and reporting dashboards",
           ],
-          stack: ["Flutter", "Supabase", "Node.js", "N8N"],
-          links: { demo: "#", repo: "#" },
+          stack: ["Next.js", "NestJS + Fastify", "Prisma", "PostgreSQL + PostGIS", "BullMQ", "Redis", "WebSockets", "Webhooks"],
+          links: { demo: "", repo: "", gallery: true },
+          gallery: {
+            images: [
+              "/projects/gestor-de-obras/image1.png",
+              "/projects/gestor-de-obras/image2.png",
+              "/projects/gestor-de-obras/image3.png"
+            ]
+          }
         },
       ],
     },
     pt: {
-      title: "Estudos de Caso em Destaque",
+      title: "Projetos em Destaque",
       cards: [
         {
           slug: "safety-platform",
           title: "SOS Mulher Segura — Plataforma de Segurança",
           summary:
-            "Central de comando e apps do cidadão para relatos de incidentes em tempo real, salas de voz seguras e despacho ao vivo.",
+            "Aplicativo de segurança da mulher usado pelas prefeituras como medida de proteção. Possui botão de pânico para chamados diretos à viatura mais próxima e central, salas de voz integradas e compartilhamento de localização em tempo real.",
           highlights: [
-            "Atualizações via websocket <200ms para 1k+ usuários",
-            "JWT, RBAC, Clean Architecture e testes automatizados",
-            "Salas de voz (WebRTC) com gravação e trilhas de auditoria",
+            "Botão de pânico com despacho direto à viatura mais próxima e central",
+            "Salas de voz integradas para contato contínuo com as viaturas",
+            "Compartilhamento e rastreamento de localização em tempo real",
+            "Deploy municipal para iniciativas de segurança pública",
           ],
-          stack: ["Next.js", "NestJS", "PostgreSQL", "Redis", "WebSockets", "WebRTC"],
-          links: { demo: "#", repo: "#" },
+          stack: ["Flutter", "Next.js", "NestJS + Fastify", "Prisma", "PostgreSQL + PostGIS", "BullMQ", "Redis", "WebSockets", "Push Notifications"],
+          links: { demo: null, repo: null, gallery: true },
+          gallery: {
+            images: [
+              "/projects/sos-mulher/sos-mob-1.jpeg",
+              "/projects/sos-mulher/sos-mob-2.jpeg", 
+              "/projects/sos-mulher/sos-mob-3.jpeg",
+              "/projects/sos-mulher/sos-mob-4.jpeg",
+              "/projects/sos-mulher/sos-mob-5.jpeg",
+              "/projects/sos-mulher/sos-web-1.jpeg",
+              "/projects/sos-mulher/sos-web-2.jpeg"
+            ]
+          }
         },
         {
           slug: "procurement-suite",
-          title: "Central de Compras Brasil — Suite de E-Procurement",
+          title: "Licita Aí — Painel de Licitações Públicas",
           summary:
-            "Pregões com salas de disputa, propostas, cotações, fluxos de conformidade e trilhas de auditoria.",
+            "Plataforma web que facilita a gestão de processos de licitações públicas, conectando fornecedores e órgãos públicos através de uma interface moderna e intuitiva.",
           highlights: [
-            "Fluxos de disputa/negociação com prazos e contrapropostas",
-            "Auditabilidade transparente e aprovações por papéis",
-            "Redução de ~25% no ciclo de compras",
+            "Cadastro de fornecedores e gestão de produtos/serviços",
+            "Acompanhamento de processos licitatórios em tempo real",
+            "Sala de disputa de leilão com negociações ao vivo",
+            "Assistente de IA virtual para orientação nos processos",
           ],
-          stack: ["Next.js", "Supabase", "PostgreSQL"],
-          links: { demo: "#", repo: "#" },
+          stack: ["Next.js", "TypeScript", "Supabase", "PostgreSQL", "Webhooks", "Supabase Realtime", "Tailwind CSS", "shadcn/ui"],
+          links: { demo: "", repo: "", gallery: true },
+          gallery: {
+            images: [
+              "/projects/licita-ai/licita-ai-1.png",
+              "/projects/licita-ai/licita-ai-2.jpeg",
+              "/projects/licita-ai/licita-ai-3.jpeg",
+              "/projects/licita-ai/licita-ai-4.jpeg",
+              "/projects/licita-ai/licita-ai-5.jpeg",
+              "/projects/licita-ai/licita-ai-6.jpeg",
+              "/projects/licita-ai/licita-ai-7.png",
+            ]
+          }
         },
         {
           slug: "fleet-management",
-          title: "Carletto Frotas — Gestão de Frotas",
+          title: "Feira Agro — Da Terra para a Mesa",
           summary:
-            "Controle de veículos/motoristas, manutenção preventiva, abastecimento/custos e alertas em tempo real.",
+            "Aplicativo desenvolvido para a Secretaria de Agronomia da Prefeitura de Rio Branco do Sul - PR com a finalidade de aproximar os produtores rurais locais com a população em geral do município.",
           highlights: [
-            "Regras de manutenção preventiva e catálogo de peças",
-            "Dashboards com KPIs acionáveis",
-            "99,95% de uptime em picos",
+            "Mercado online conectando consumidores diretamente aos produtores locais",
+            "Ponto de retirada municipal para coleta dos pedidos",
+            "Painel web para gestão e acompanhamento da prefeitura",
+            "Apoio à agricultura local e desenvolvimento comunitário",
           ],
-          stack: ["Next.js", "NestJS", "PostgreSQL", "Redis"],
-          links: { demo: "#", repo: "#" },
+          stack: ["Flutter", "Firebase", "PostgreSQL", "Next.js"],
+          links: { demo: "", repo: "", gallery: true },
+          gallery: {
+            images: [
+              "/projects/feira-agro/Screenshot_1757438092.png",
+              "/projects/feira-agro/Screenshot_1757438326.png",
+              "/projects/feira-agro/Screenshot_1757438556.png",
+              "/projects/feira-agro/Screenshot_1757438711.png",
+              "/projects/feira-agro/Screenshot_1757438835.png",
+              "/projects/feira-agro/Screenshot_1757438977.png",
+              "/projects/feira-agro/Screenshot_1757441182.png"
+            ]
+          }
         },
         {
           slug: "fitness-app",
-          title: "Gym-Junkies — Saúde & Fitness",
+          title: "Gestor de Obras — Gestão de Obras Públicas",
           summary:
-            "App híbrido com treinos, calculadoras de BF/TDEE e coaching nutricional com IA no premium.",
+            "Aplicação web para gestão de obras de órgãos públicos como prefeituras e secretarias. Uma aplicação robusta e completa que conta com toda a gestão do órgão, desde o início até a conclusão.",
           highlights: [
-            "Rotinas offline-ready e acompanhamento de progresso",
-            "Sugestões de cardápio com LLM via fluxos no N8N",
-            "Onboarding A/B elevou a ativação",
+            "Gestão completa do ciclo de vida dos projetos desde ordens de serviço até conclusão",
+            "Planejamento orçamentário, controle de estoque e gestão financeira",
+            "Sistema de gestão de notas fiscais e controle documental",
+            "Dashboards de monitoramento e relatórios em tempo real",
           ],
-          stack: ["Flutter", "Supabase", "Node.js", "N8N"],
-          links: { demo: "#", repo: "#" },
+          stack: ["Next.js", "NestJS + Fastify", "Prisma", "PostgreSQL + PostGIS", "BullMQ", "Redis", "WebSockets", "Webhooks"],
+          links: { demo: "", repo: "", gallery: true },
+          gallery: {
+            images: [
+              "/projects/gestor-de-obras/image1.png",
+              "/projects/gestor-de-obras/image2.png",
+              "/projects/gestor-de-obras/image3.png"
+            ]
+          }
         },
       ],
     },
